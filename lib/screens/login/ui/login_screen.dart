@@ -104,12 +104,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
               child: TextField(
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.email),
                   prefixIconColor: secondaryColor,
-                  labelText: "Email Address",
+                  labelText: emailIdString,
                   labelStyle: TextStyle(
                       color: secondaryColor,
                       fontSize: 16,
@@ -126,14 +126,65 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.phone),
-                      prefixIconColor: secondaryColor,
-                      labelText: "Enter Phone",
-                      labelStyle: TextStyle(color: secondaryColor, s)),
-                )),
+              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+              child: TextField(
+                decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.phone),
+                    prefixIconColor: secondaryColor,
+                    labelText: phoneString,
+                    labelStyle: TextStyle(
+                        color: secondaryColor,
+                        fontSize: 16,
+                        fontFamily: 'Roboto',
+                        fontStyle: FontStyle.italic),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                          color: secondaryColor,
+                          width: 2.0,
+                          style: BorderStyle.solid),
+                    ),
+                    focusedErrorBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.red))),
+              ),
+            ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  forgetPasswordString,
+                  style: TextStyle(color: secondaryColor),
+                ),
+              ),
+            ),
+            Center(
+              child: MaterialButton(
+                color: secondaryColor,
+                height: height * 0.06,
+                minWidth: width - 40,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+                onPressed: () {},
+                child: Text(
+                  loginToAccountString,
+                  style: TextStyle(fontSize: 18, color: Colors.black45),
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(doesnotHaveAccountString,
+                    style: TextStyle(fontSize: 12, color: Colors.black)),
+                SizedBox(
+                  width: 10,
+                ),
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Text(createAnAccount,
+                        style: TextStyle(fontSize: 12, color: Colors.black45))),
+              ],
+            ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _pickImageFromStorage,

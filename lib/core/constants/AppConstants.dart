@@ -1,4 +1,10 @@
-const String appName ="Flutter Home";
-const String slogan ="rent is everywhere";
-const String imagePath ="assets/home_banner.jpg";
-const String loginString ="LOGIN";
+const String appName = "Flutter Home";
+const String slogan = "rent is everywhere";
+const String imagePath = "assets/home_banner.jpg";
+const String loginString = "LOGIN";
+const String forgetPasswordString = "Forget Password";
+const String emailIdString = "Email Address";
+const String phoneString = "Enter Phone";
+const String loginToAccountString = "Login To Account";
+const String doesnotHaveAccountString = "Does not have account?";
+const String createAnAccount = "Create An Account";
